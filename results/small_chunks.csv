@@ -1,0 +1,74 @@
+configuration,question_id,question,answer,score,chunk_size,chunk_overlap,retrieval
+small_chunks,1,What is Retrieval-Augmented Generation (RAG)?,Retrieval-Augmented Generation (RAG).,3,500,50,similarity
+small_chunks,2,Who introduced the Transformer architecture?,Noam proposed the Transformer architecture.,3,500,50,similarity
+small_chunks,3,What is the main contribution of the BERT paper?,"The main contribution of the BERT paper is that it obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5%, improving MultiNLI accuracy to 86.7%, and achieving significant improvements in SQuAD v1.1 question answering Test F1 and SQuAD v2.0 Test F1 scores.",5,500,50,similarity
+small_chunks,4,What does LLaMA stand for?,LLaMA stands for Large Language Model Application or it could be interpreted as Large Language Model Algorithm.,5,500,50,similarity
+small_chunks,5,What is Chain-of-Thought prompting?,Chain-of-thought prompting.,3,500,50,similarity
+small_chunks,6,Which paper introduced self-attention as the primary sequence modeling mechanism?,"The answer is not provided in the given context. The text only mentions that ""Self-attention, sometimes called intra-attention"" is a mechanism relating different positions of a single sequence, but it does not mention which paper introduced self-attention as the primary sequence modeling mechanism.",5,500,50,similarity
+small_chunks,7,What benchmark datasets were used in the BERT paper?,"The answer is not explicitly mentioned in the provided context. The context only mentions GLUE tasks and their corresponding accuracy scores for BERT and OpenAI GPT, but it does not mention specific benchmark datasets by name.",5,500,50,similarity
+small_chunks,8,What problem is RAG designed to solve?,"The text doesn't explicitly state the specific problem that RAG is designed to solve, but based on the context, it can be inferred that RAG is a model-based generation model designed to generate more accurate and informative responses, particularly in scenarios where users need to combine content from multiple sources (e.g. generating responses to Jeopardy questions).",5,500,50,similarity
+small_chunks,9,How does RAG improve upon the limitations of standard language models?,"The provided text does not directly answer how RAG improves upon the limitations of standard language models. However, it can be inferred that RAG models outperform parametric seq2seq models and task-specific retrieve-and-extract architectures on various knowledge-intensive NLP tasks, suggesting that RAG may address some of the limitations of these models.",5,500,50,similarity
+small_chunks,10,Compare the Transformer architecture with BERT.,"The Transformer architecture used in BERT has 110M parameters, which is smaller than the largest Transformer found in literature. In contrast, BERT LARGE contains 340M parameters, indicating that increasing model size can lead to improvements on large-scale tasks.",5,500,50,similarity
+small_chunks,11,How does LLaMA differ from BERT in terms of training objectives?,"The context doesn't provide specific information on how LLaMA differs from BERT in terms of training objectives. However, it mentions that BERT uses 80% [MASK], 10% same, and 10% random token replacement during MLM pre-training, while the left part of Table 8 represents the probabilities of these strategies used by different models (including LLaMA), but the specific differences between BERT and LLaMA are not explicitly stated.",5,500,50,similarity
+small_chunks,12,What role does attention play in both Transformer and LLaMA models?,"Based on the provided context, it is not explicitly stated what role attention plays in LLaMA models. However, according to the text:
+
+""entirely on self-attention to compute representations of its input and output without using sequence-aligned RNNs or convolution.""
+
+This implies that attention plays a crucial role in the Transformer model, but there is no mention of LLaMA models.",5,500,50,similarity
+small_chunks,13,How do Chain-of-Thought prompting and RAG improve reasoning in different ways?,"Based on the context, Chain-of-Thought prompting improves reasoning by allowing language models to decompose multi-step problems into sequential reasoning steps. This approach is useful beyond just activating knowledge, making it a more robust method for facilitating reasoning. In contrast, RAG (Reasoning About Generalized Mental States) does not have information about how it improves reasoning in the provided context.",5,500,50,similarity
+small_chunks,14,What common challenges are addressed by BERT and LLaMA?,"The provided text does not explicitly state what common challenges are addressed by BERT and LLaMA. However, it mentions that a thorough evaluation of language models is challenging due to the large range of toxic content they can generate.
+
+RealToxicityPrompts (a specific work) have considered addressing this challenge, but there is no mention of BERT specifically tackling this issue in the provided context.",5,500,50,similarity
+small_chunks,15,Which of the five papers had the greatest impact on modern large language models and why?,"Based on the provided context, I would argue that the paper by Stephen Robertson and Hugo Zaragoza ([53]) has had the greatest impact on modern large language models.
+
+The reason for this is that they introduced the Bm25 algorithm, which forms the basis of BM25 and other variants like BERTm (briefly mentioned in [54]). BM25 is widely used as a parameterization of probabilistic relevance frameworks such as BM25, and its influence can be seen in many modern language models.
+
+In contrast, while papers by Irene Solaiman et al. ([54]) and others discuss the potential for fine-tuning large language models on instructions, they do not introduce new fundamental concepts or algorithms that are directly building upon Robertson and Zaragoza's work.",5,500,50,similarity
+small_chunks,16,"Explain how RAG, BERT, and LLaMA could be combined in a production AI system.","This context does not provide enough information to answer the question about combining RAG, BERT, and LLaMA. The provided text focuses on explaining fine-tuning BERT on different tasks and discusses other research directions, but it does not mention how these models or RAG could be combined in a production AI system.",5,500,50,similarity
+small_chunks,17,What are the major trade-offs between retrieval-based and parametric knowledge systems?,"The context suggests that there is a trade-off between retrieval-based (non-parametric) and parametric knowledge systems.
+
+On one hand, parametric knowledge systems have limitations in accessing and precisely manipulating knowledge, leading to performance lags on knowledge-intensive tasks.
+
+On the other hand, non-parametric knowledge systems (retrieval-based models like RAG) are able to provide factual and specific information but may not be able to access and manipulate knowledge as precisely or flexibly as parametric systems.",5,500,50,similarity
+small_chunks,18,Summarize the evolution from Transformers to modern LLMs using all five papers.,"Based on the provided context, here's a summary of the evolution from Transformers to modern LLMs:
+
+The evolution began with the introduction of the Transformer architecture by Vaswani et al. (2017). This marked a significant shift from traditional RNN-based architectures to a self-attention mechanism.
+
+Later papers built upon this foundation. Song et al.'s paper (2022) utilized deepspeed and megatron to train a large-scale generative language model, Megatron-Turing NLG 530b. While not introducing new architecture elements, they showcased the scalability of Transformers for massive models.
+
+Romal Thoppilan et al.'s Roformer paper (2021) introduced an enhanced transformer with rotary position embedding, which can be seen as a refinement of the original Transformer design.
+
+More recent advancements come from the authors' own work. They modified the transformer architecture and presented their modifications, training method, and performance on standard benchmarks.
+
+The evolution also mentions RAG model, which is not part of the papers themselves but rather an example provided in the README file. It's likely that this refers to a state-of-the-art LLM, such as Chinchilla or PaLM-62B, with which their model is being compared.
+
+Throughout these developments, we can observe significant advancements in transformer-based architectures and larger-scale language models, ultimately leading to the creation of modern large language models.",5,500,50,similarity
+small_chunks,19,What future research directions are suggested across these papers?,"There is no mention of future research directions in the provided context. The checklist only covers general author guidelines, including describing limitations and potential negative societal impacts, but does not specifically ask about future research directions.",5,500,50,similarity
+small_chunks,20,Provide a comprehensive synthesis of all five papers and explain how they collectively contributed to today's AI systems.,"The five papers present distinct advancements in natural language processing (NLP) and artificial intelligence (AI), contributing to the development of more sophisticated and human-like AI systems. Here is a comprehensive synthesis of these papers:
+
+1. **A knowledge-grounded neural conversation model** by Marjan Ghazvininejad et al. (2020)
+
+This paper introduced a knowledge-grounded neural conversation model, which enabled conversational AI systems to reason about the world and provide more accurate responses. The authors proposed a novel architecture that incorporates external knowledge graphs to improve contextual understanding.
+
+2. **AI chains: Transparent and controllable human-AI interaction** by Tongshuang Wu et al. (2022)
+
+This paper presented ""AI Chains,"" a framework for transparent and controllable human-AI interaction. AI Chains allowed humans to explicitly specify the desired outcome of an interaction, ensuring that the AI system executes a predetermined sequence of tasks or subroutines.
+
+3. **Neural execution engines: Learning to execute subroutines** by Yujun Yan et al. (2020)
+
+This paper explored neural execution engines for learning to execute subroutines in AI systems. The authors proposed a novel approach that enabled the development of more efficient and flexible AI models capable of executing complex tasks.
+
+4. **Reﬁning language models with compositional explanations** by Huihan Yao et al. (2021)
+
+This paper focused on reﬁning language models using compositional explanations. The authors developed a framework for analyzing and explaining the internal workings of language models, which can improve their performance and provide insights into their decision-making processes.
+
+5. **A knowledge-grounded neural conversation model** appears again in this list as a reference to Marjan Ghazvininejad et al. 2020 paper but its relevant information is provided above
+ 
+Collectively, these papers contribute to the development of more advanced AI systems by:
+
+* Improving conversational AI capabilities through external knowledge graphs (Ghazvininejad et al.)
+* Enabling transparent and controllable human-AI interaction through explicit task specification (Wu et al.)
+* Developing neural execution engines for efficient subroutine execution (Yan et al.)
+* Providing compositional explanations for language models to improve their performance and understanding (Yao et al.)
+
+These advancements collectively contribute to the development of more sophisticated AI systems that can engage in more human-like conversations, execute complex tasks with greater efficiency, and provide transparent and controllable interaction.",5,500,50,similarity

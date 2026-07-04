@@ -1,0 +1,5 @@
+configuration,average_score
+baseline,4.7
+large_chunks,4.8
+mmr,4.7
+small_chunks,4.7

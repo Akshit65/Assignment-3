@@ -1,0 +1,78 @@
+configuration,question_id,question,answer,score,chunk_size,chunk_overlap,retrieval
+mmr,1,What is Retrieval-Augmented Generation (RAG)?,"Retrieval-Augmented Generation (RAG) is a model that uses the input sequence to retrieve text documents and uses them as additional context when generating the target sequence. It consists of two components: 
+
+1. A retriever that returns distributions over text passages given a query.
+2. A generator parametrized by another set of parameters, which generates the target sequence based on the retrieved information and its own output up to a certain point.",5,1000,200,mmr
+mmr,2,Who introduced the Transformer architecture?,"Vaswani et al., (2017)",3,1000,200,mmr
+mmr,3,What is the main contribution of the BERT paper?,"The main contribution of the BERT paper is that it argues that the bi-directionality and two pre-training tasks presented in their work account for most of the empirical improvements, but also notes several other differences between how BERT and GPT were trained.",5,1000,200,mmr
+mmr,4,What does LLaMA stand for?,LLaMA stands for Large Language Model Application.,3,1000,200,mmr
+mmr,5,What is Chain-of-Thought prompting?,"Chain-of-Thought prompting is an approach for facilitating reasoning in language models that allows them to generate chains of thought, mimicking a step-by-step thought process for arriving at an answer.",5,1000,200,mmr
+mmr,6,Which paper introduced self-attention as the primary sequence modeling mechanism?,"The paper by Vaswani et al. is not mentioned in this context, however it was mentioned that the sinusoidal version of learned positional embeddings [9] was used instead of self-attention.
+
+It does mention that a common pattern for text pairs is to independently encode text pairs before applying bidirectional cross attention, as in Parikh et al. (2016); Seo et al. (2017).",5,1000,200,mmr
+mmr,7,What benchmark datasets were used in the BERT paper?,The GLUE task and SQuAD v1.1 dataset were used in the BERT paper.,3,1000,200,mmr
+mmr,8,What problem is RAG designed to solve?,RAG (Retrieval-Augmented Generative) model is designed to improve Open-domain QA (Question Answering) results by retrieving relevant documents at test time. The model aims to leverage the strengths of both generative and retrieval-based approaches to achieve better performance in open-domain question answering tasks.,5,1000,200,mmr
+mmr,9,How does RAG improve upon the limitations of standard language models?,"RAG improves upon the limitations of standard language models by leveraging external knowledge to enhance semantic understanding and providing more control and interpretability. This is achieved through its retriever component, which uses a query to retrieve relevant text passages, and its generator component, which uses this context to generate more accurate and factual outputs.",5,1000,200,mmr
+mmr,10,Compare the Transformer architecture with BERT.,"The Transformer architecture used in this work is a modified version of the original implementation described in Vaswani et al. (2017) and released in the tensor2tensor library, whereas BERT's model architecture is also a multi-layer bidirectional Transformer encoder based on the same description, with minimal difference between the pre-trained and final downstream architectures.",5,1000,200,mmr
+mmr,11,How does LLaMA differ from BERT in terms of training objectives?,"The text does not explicitly state how LLaMA differs from BERT in terms of training objectives. However, it mentions that LLaMA is a model developed by Facebook Research and was used as the basis for this work, whereas BERT is mentioned as one of the models being compared to OpenAI GPT.",5,1000,200,mmr
+mmr,12,What role does attention play in both Transformer and LLaMA models?,"According to the context, attention plays a key role in both Transformer and LLaMA models. In both cases, attention is used to enable every position in the model to attend over all positions in the input sequence or previous layers. 
+
+In the Transformer model, there are three ways in which attention is utilized: 
+
+1. Encoder-decoder attention: This allows each position in the decoder to attend over all positions in the input sequence.
+2. Self-attention layers in the encoder: Each position in the encoder can attend to all positions in the previous layer of the encoder.
+3. Self-attention layers in the decoder: Each position in the decoder can attend to all positions in the decoder up to and including that position.
+
+In LLaMA models, attention is utilized similarly to ensure fast inference with a trade-off between training speed and model size.",5,1000,200,mmr
+mmr,13,How do Chain-of-Thought prompting and RAG improve reasoning in different ways?,"The text doesn't explicitly compare Chain-of-Thought prompting with RAG (Reasoning About Genres) directly. However, it can be inferred that they complement each other.
+
+Chain-of-thought prompting allows models to decompose multi-step problems into intermediate steps, which means additional computation can be allocated to problems. This is particularly beneficial for large-scale models.
+
+On the other hand, the text mentions ""few-shot exemplars"" and different annotators writing chains of thought, but it does not explicitly mention RAG.",5,1000,200,mmr
+mmr,14,What common challenges are addressed by BERT and LLaMA?,"According to the provided context, it is not explicitly stated that BERT and LLaMA directly address the same challenges. However, it can be inferred that they both aim to address potential issues with large language models.
+
+BERT addresses the issue of potentially generating toxic or offensive content, as mentioned in A.2, which is a common challenge faced by many large language models.
+
+LLaMA-65B and LLaMA-13B, on the other hand, are compared with existing models on benchmarks that measure toxic content production and stereotypes detection (A). This suggests that these models aim to address or mitigate these issues as well.
+
+Therefore, while there is no direct mention of a common challenge addressed by BERT and LLaMA, they both appear to be concerned with reducing the risk of generating harmful content.",5,1000,200,mmr
+mmr,15,Which of the five papers had the greatest impact on modern large language models and why?,"The question does not provide enough context to identify which specific paper had the greatest impact on modern large language models. However, based on general knowledge, Paper [55] Sainbayar Sukhbaatar, Arthur Szlam, Jason Weston, and Rob Fergus's ""End-to-end memory networks"" is a notable example of a paper that has influenced the development of transformer-based architectures, which are used in many modern large language models.
+
+The paper introduced the concept of end-to-end memory networks, which laid the foundation for later research on attention mechanisms and transformer architectures. The success of these early models and their influence on the development of subsequent larger and more complex models is likely a key factor in the current state-of-the-art in natural language processing tasks.",5,1000,200,mmr
+mmr,16,"Explain how RAG, BERT, and LLaMA could be combined in a production AI system.","This context doesn't provide information on how RAG, BERT, or LLaMA could be combined in a production AI system. It only discusses their performance in certain NLP tasks and mentions potential risks of advanced language models, but does not provide any details on combining these models for use in a production system.",5,1000,200,mmr
+mmr,17,What are the major trade-offs between retrieval-based and parametric knowledge systems?,"Unfortunately, the provided context does not explicitly state the major trade-offs between retrieval-based and parametric knowledge systems. However, based on the information given, we can infer some possible trade-offs:
+
+1. **Memory usage**: Parametric models require fewer trainable parameters, resulting in less memory usage, whereas non-parametric memory indexes (retrieval component) require a large number of 21M vectors.
+2. **Fine-grained knowledge manipulation**: Parametric models might be better suited for fine-grained knowledge manipulation and precise access to factual knowledge, while retrieval-based systems may struggle with this aspect due to their lack of explicit requirement for factual knowledge.
+3. **Performance on downstream tasks**: Retrieval-based systems may perform similarly to parametric models (like BART) on certain tasks when the retriever collapses, suggesting that there might be a trade-off between performance and fine-grained control over knowledge.
+
+However, these inferences are based on the provided context and might not represent the major trade-offs between retrieval-based and parametric knowledge systems.",5,1000,200,mmr
+mmr,18,Summarize the evolution from Transformers to modern LLMs using all five papers.,"Based on the provided context, here is a summary of the evolution from Transformers to modern LLMs:
+
+* The training approach for modern LLMs is similar to previous work (Brown et al., 2020; Chowdhery et al., 2022) and inspired by Chinchilla scaling laws (Hoffmann et al., 2022).
+* The dataset used for pre-training includes a mixture of publicly available data sources, with English CommonCrawl being the dominant source at 67% (Wenzek et al., 2020; Jianlin Su et al., 2021; Roformer: Enhanced transformer with rotary position embedding).
+* The Roformer paper introduces rotary position embedding, which is not mentioned in previous papers.
+* The modern LLM approach builds upon earlier work, such as the Transformers library (HuggingFace), and incorporates techniques like language identification and data deduplication.
+
+Overall, the evolution from Transformers to modern LLMs involves building upon existing approaches, incorporating new techniques, and expanding the scope of pre-trained datasets.",5,1000,200,mmr
+mmr,19,What future research directions are suggested across these papers?,"Unfortunately, there is no mention of future research directions in the provided text. The context appears to be a checklist for authors, with specific questions about their paper's content and adherence to certain guidelines, but it does not include any discussion of potential future research directions.",5,1000,200,mmr
+mmr,20,Provide a comprehensive synthesis of all five papers and explain how they collectively contributed to today's AI systems.,"Based on the provided context, here is a comprehensive synthesis of the five papers:
+
+The five papers discuss various aspects of Artificial Intelligence (AI) systems, including neural conversation models, search engine guided neural machine translation, AI expert opinions on when AI will exceed human performance, and chain-of-thought prompting.
+
+The paper by Marjan Ghazvininejad et al. presents a knowledge-grounded neural conversation model, which is an advancement in natural language processing (NLP). This model demonstrates the ability of large language models to understand and generate human-like conversations.
+
+In contrast, the paper by Katja Grace et al. explores when AI will exceed human performance, citing opinions from AI experts. The study highlights the challenges in predicting when AI systems will surpass human intelligence and emphasizes the importance of continued research in this area.
+
+The papers by Jiatao Gu et al., which discuss search engine guided neural machine translation, showcase the potential of combining traditional search engines with neural machine translation techniques to improve translation accuracy. This work demonstrates the application of AI systems in real-world tasks like machine translation.
+
+Another important contribution is the paper on chain-of-thought prompting, which discusses various approaches inspired by prior directions such as prompting, natural language explanations, and program synthesis/execution. The authors highlight the importance of optimizing input prompts to improve the performance of large language models.
+
+Collectively, these papers contribute to today's AI systems in several ways:
+
+1. **Advancements in NLP**: The paper on knowledge-grounded neural conversation models demonstrates the progress made in understanding and generating human-like conversations.
+2. **AI expert opinions**: The study on when AI will exceed human performance highlights the importance of continued research in this area and provides valuable insights from AI experts.
+3. **Machine translation improvements**: The papers on search engine guided neural machine translation show how AI systems can be applied to real-world tasks like machine translation, improving accuracy and efficiency.
+4. **Optimizing large language models**: The work on chain-of-thought prompting emphasizes the importance of optimizing input prompts to improve the performance of large language models.
+
+Overall, these papers demonstrate the rapid progress made in various areas of AI research and highlight the potential applications and improvements that can be achieved through continued innovation and collaboration.",5,1000,200,mmr
